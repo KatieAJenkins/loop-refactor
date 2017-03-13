@@ -81,6 +81,15 @@ module.exports = {
     return true;
   },
 
+  objContainsProp: (arr, prop) => {
+    return arr.every(function(arrProp) {
+      if(arrProp.hasOwnProperty(prop)){
+        return true;
+      }
+        return false;
+    });
+  },
+
   stringMatch: (arr, str) => {
     let matches = [];
     for(var i = 0; i < arr.length; i++){
@@ -91,12 +100,4 @@ module.exports = {
     return matches;
   },
 
-  // stringMatch: (arr, str) => {
-  //   let matches = []; arr.map(function(arrayString) {
-  //     if (str === arrayString){
-  //       matches.push(arrayString);
-  //     }
-  //     return matches;
-  //   });
-  // }
 }
