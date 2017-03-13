@@ -54,24 +54,11 @@ module.exports = {
 
   convertNameArrayToObject: (arr) => {
     return arr.map(function(name) {
-    let obj = {};
-      // console.log(name[0]);
-      // console.log(name[1]);
-      // console.log(obj);
-      obj.first = name[0];
-      obj.last = name[1];
-      console.log(obj);
-      // nameObject.first = name[0];
-      // nameObject.last = name[1];
-      // nameObject.push(obj);
-      // console.log(obj);
-      // console.log(nameObject);
-      return obj;
+      var personObject = {};
+      personObject.first = name[0];
+      personObject.last = name[1];
+      return personObject;
     });
-    var arrObjects = [];
-    //  arrObjects.push(obj);
-    // return nameObject;
-    // return nameObject;
   },
 
   objContainsProp: (arr, prop) => {
