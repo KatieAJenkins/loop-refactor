@@ -100,4 +100,11 @@ module.exports = {
     return matches;
   },
 
+  stringMatch: (array, string) => {
+    return array.filter(function(element) {
+      console.log(element);
+      return element.toLowerCase().indexOf(string.toLowerCase()) > -1;
+    });
+  }
+
 }
