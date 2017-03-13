@@ -5,11 +5,11 @@
 Refactor the following functions. Use higher-order functions rather than for-loops.
 
 Choose from the following higher-order functions:
-  map:
+  map: loops through all of array and modify
   filter: new array with all elements that pass a test
   reduce: loop through and do something with starting base
   every: check if every element in array passes a test
-  some:
+  some: checks if some element in array passes test
 
 Run the command 'mocha' to test. Tests check for expected output and absence of for-loops.
 
@@ -39,6 +39,17 @@ module.exports = {
       }
     }
     return false;
+  },
+
+  someObjsContainProp: (arr, prop) => {
+    return arr.some(function(arrProp){
+      if(arrProp.hasOwnProperty(prop)){
+        console.log(true);
+        return true;
+      }
+        console.log(false);
+        return false;
+    });
   },
 
   convertNameArrayToObject: (arr) => {
